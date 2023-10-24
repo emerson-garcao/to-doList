@@ -6,13 +6,17 @@
 :root{
   --bg-color: #FFFFFF;
   --bg-container: rgba(168, 168, 168, 0.5);
+  --focus-color:  rgb(13, 106, 134);
+  --bg-button:rgba( 190, 190, 190, 0.5);
+
 }
 body{
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
 }
 body *{
   font-family: 'Inter', sans-serif;
-  margin: 0 auto;
 }
 #container{
   text-align: center;
@@ -21,4 +25,37 @@ body *{
   height: 100vh;
   background-color: var(--bg-container);
   box-shadow: 0px 15px 15px var(--bg-container);
+}
+#container h1{
+  margin-bottom: 18px;
+  font-size: 35px;
+}
+.box-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.box-input input{
+  height: 30px;
+  width: 60%;
+  border: none;
+  border-radius: 9999px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.box-input input:focus{
+  outline: 2px solid var(--focus-color);
+}
+.box-input button{
+  height: 30px;
+  width: 25%;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.box-input button:hover{
+  background: var(--bg-button); 
 }
